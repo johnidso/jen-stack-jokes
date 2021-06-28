@@ -4,6 +4,7 @@ $( document ).ready( onReady );
 
 function onReady() {
     console.log('DOM ready');
+    getJokes();
     $('#addJokeButton').on("click", sendJoke);
 }
 
@@ -29,7 +30,7 @@ function sendJoke(){
         }
     })
     .then(() => {
-        // get jokes
+        getJokes();
     })
     .catch((error) => {
         alert('Error!', error);
@@ -42,7 +43,7 @@ function getJokes(){
         url: '/joke',
     })
     .then((response) => {
-        // show calcs of response
+        displayJokes(response);
     })
     .catch((error) => {
         alert('Error!', error);
