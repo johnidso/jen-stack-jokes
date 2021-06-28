@@ -42,5 +42,6 @@ app.listen(PORT, () => {
 }); // end spin up server
 
 app.post('/joke', function(req,res){
-  console.log(req.body);
+  jokes.push(req.body);
+  res.sendStatus(201);
 })

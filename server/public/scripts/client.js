@@ -33,5 +33,19 @@ function sendJoke(){
     })
     .catch((error) => {
         alert('Error!', error);
-    })
+    });
 }
+
+function getJokes(){
+    $.ajax({
+        method: 'GET',
+        url: '/joke',
+    })
+    .then((response) => {
+        // show calcs of response
+    })
+    .catch((error) => {
+        alert('Error!', error);
+    });
+}
+
