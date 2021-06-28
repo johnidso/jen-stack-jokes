@@ -49,3 +49,13 @@ function getJokes(){
     });
 }
 
+function displayJokes(jokeArray){
+    $('#jokeDisplay').empty();
+    for(const joke of jokeArray){
+        $('#jokeDisplay').append(`
+        <h3>${joke.whoseJoke}'s Joke</h3>
+        ${joke.jokeQuestion}
+        <em>${joke.punchLine}</em>
+        `)
+    }
+}
