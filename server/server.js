@@ -48,5 +48,4 @@ app.post('/joke', function(req,res){
 
 app.get('/joke', function(req,res){
   res.send(jokes);
-  res.sendStatus(200);
 })
